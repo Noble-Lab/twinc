@@ -1,0 +1,34 @@
+[input_files]
+seq_file=data/hg38.no_Y_MT.fa
+seq_memmap=data/hg38.no_Y_MT.memmap
+labels_file_wtissue=data/trans_contacts_all_heart_left_ventricle_100000_5_v_5_sup.txt
+labels_file_val=data/trans_contacts_chr1_chr3_heart_left_ventricle_100000_5_v_5_sup.txt
+labels_file_test=data/trans_contacts_chr9_chr10_heart_left_ventricle_100000_5_v_5_sup.txt
+
+[data_parameters]
+chroms_order={chr1:1, chr2:2, chr3:3, chr4:4, chr5:5, chr6:6, chr7:7, chr8:8, chr9:9, chr10:10, chr11:11, chr12:12, chr13:13, chr14:14, chr15:15, chr16:16, chr17:17, chr18:18, chr19:19, chr20:20, chr21:21, chr22:22, chrX:23}
+chroms_order_inv={1:chr1, 2:chr2, 3:chr3, 4:chr4, 5:chr5, 6:chr6, 7:chr7, 8:chr8, 9:chr9, 10:chr10, 11:chr11, 12:chr12, 13:chr13, 14:chr14, 15:chr15, 16:chr16, 17:chr17, 18:chr18, 19:chr19, 20:chr20, 21:chr21, 22:chr22, 23:chrX}
+train_chroms=[chr2, chr6, chr5, chr7, chr8, chr11, chr12, chr13, chr14, chr16, chr18, chr19,  chr21, chr22, chrX, chr4, chr15, chr17, chr20]
+val_chroms=[chr1, chr3]
+test_chroms=[chr9, chr10]
+memmap_length=3031042417
+rep_name=heart_left_ventricle
+selected_resolution=100000
+hic_datatype=observed
+hic_raw=NONE
+hic_norm=SCALE
+hic_type=BP
+
+[train_parameters]
+num_workers=16
+batch_size=16
+lr=0.001
+max_epochs=10
+device=cuda
+
+[model_parameters]
+final_model_path=models/TransnetCNN_5_left.final_avg.torch
+best_model_path=models/TransnetCNN_5_left.best_avg.torch
+
+[output_files]
+save_prefix=results/
