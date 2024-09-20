@@ -5,7 +5,7 @@ Author: Anupama Jha <anupamaj@uw.edu>
 
 import torch
 import numpy as np
-from twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list
+from .twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list
 from sklearn.metrics import roc_curve, roc_auc_score, average_precision_score, precision_recall_curve
 
 

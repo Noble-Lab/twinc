@@ -9,8 +9,8 @@ import pyfaidx
 import argparse
 import numpy as np
 import configparser
-from twinc_network import TwinCNet
-from twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list
+from .twinc_network import TwinCNet
+from .twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list
 
 
 def extract_set_data(labels_file, set_chrs, chrom_starts):
@@ -58,7 +58,7 @@ def extract_set_data(labels_file, set_chrs, chrom_starts):
     return set_loci
 
 
-def train_function(config_file):
+def twinc_train(config_file):
     """
     Main function with all the operations to train the twinc model.
     :param config_file: str, path to train config file.
@@ -348,7 +348,7 @@ def main():
 
     print(f"Training a supervised CNN model.")
 
-    train_function(args.config_file)
+    twinc_train(args.config_file)
 
 
 if __name__ == "__main__":

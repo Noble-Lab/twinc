@@ -8,13 +8,13 @@ import pyfaidx
 import argparse
 import numpy as np
 import configparser
-from twinc_network import TwinCNet
-from twinc_train import extract_set_data, TwinCDataGenerator
-from twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list, gc_predictor
+from .twinc_network import TwinCNet
+from .twinc_train import extract_set_data, TwinCDataGenerator
+from .twinc_utils import count_pos_neg, decode_chrome_order_dict, decode_list, gc_predictor
 from sklearn.metrics import roc_curve, roc_auc_score, average_precision_score, precision_recall_curve
 
 
-def test_function(config_file):
+def twinc_test(config_file):
     """
     Function to run test set data through a trained TwinC model.
     :param config_file: str, path to the config file.
@@ -94,7 +94,7 @@ def test_function(config_file):
 
     rep_name = config["data_parameters"]["rep_name"]
 
-    val_gen = TransHiCDataGenerator(seq_memory_map,
+    val_gen = TwinCDataGenerator(seq_memory_map,
                                     test_loci,
                                     seq_chrom_start,
                                     seq_chrom_end,
@@ -112,7 +112,7 @@ def test_function(config_file):
         shuffle=False,
     )
     # Move the model to the appropriate device
-    model = TransHiCNetClassify()
+    model = TwinCNet()
     model.load_state_dict(torch.load(best_save_model))
     model = model.to(device)
 
@@ -203,7 +203,7 @@ def main():
 
     print(f"Predict test set.")
 
-    test_function(args.config_file)
+    twinc_test(args.config_file)
 
 
 if __name__ == "__main__":
