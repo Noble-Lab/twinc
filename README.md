@@ -22,7 +22,7 @@ twinc_test --config_file configs/heart_left_ventricle.yml
 
 # Citation
 
-**Jha A, Hristov B, Wang X, Wang S, Greenleaf WJ, Kundaje A, Aiden EL, Bertero A, Noble WS.**  Prediction and functional interpretation of inter-chromosomal genome architecture from DNA sequence with TwinC. *bioRxiv* (2024): 2024-09.
+**Jha A, Hristov BH, Wang X, Wang S, Greenleaf WJ, Kundaje A, Lieberman Aiden E, Bertero A, Noble WS.**  Prediction and functional interpretation of inter-chromosomal genome architecture from DNA sequence with TwinC. *bioRxiv* (2024): 2024-09.
 
 
 # Contributions
