@@ -776,7 +776,7 @@ class TwinCNet(torch.nn.Module):
 
     def forward_twin_encoder(self, x):
         """
-        Both sequences pass through the same ENCODER to generate the sequence embedding.
+        Both sequences pass through the ENCODER to generate the sequence embedding.
         :param x: tensor, one-hot-encoded sequence
         :return: tensor, sequence embedding
         """
