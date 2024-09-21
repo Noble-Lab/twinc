@@ -776,20 +776,19 @@ class TwinCNet(torch.nn.Module):
 
     def forward_twin_encoder(self, x):
         """
-        Both sequences pass through the same ENCODER to generate
-        the sequence embedding.
+        Both sequences pass through the same ENCODER to generate the sequence embedding.
         :param x: tensor, one-hot-encoded sequence
         :return: tensor, sequence embedding
         """
-        first = True
-        for linear_conv, nonlinear_conv in zip(self.linear_conv_encoder, self.nonlinear_conv_encoder):
-            if first:
-                linear_x = linear_conv(x)
-                x = nonlinear_conv(linear_x)
-                first = False
+        start = True
+        for linear_conv_encode, nonlinear_conv_encode in zip(self.linear_conv_encoder, self.nonlinear_conv_encoder):
+            if start:
+                linear_x = linear_conv_encode(x)
+                x = nonlinear_conv_encode(linear_x)
+                start = False
             else:
-                linear_x = linear_conv(x + linear_x)
-                x = nonlinear_conv(linear_x)
+                linear_x = linear_conv_encode(x + linear_x)
+                x = nonlinear_conv_encode(linear_x)
         return x
 
     def forward_decoder(self, x1, x2):
@@ -801,19 +800,19 @@ class TwinCNet(torch.nn.Module):
         """
         embed = x1[:, :, :, None] + x2[:, :, None, :]
 
-        first = True
-        for lconvtwo, convtwo in zip(self.linear_conv_decoder, self.nonlinear_conv_decoder):
-            if first:
-                embed = lconvtwo(embed)
-                embed = convtwo(embed) + embed
-                first = False
+        start = True
+        for linear_conv_decode, nonlinear_conv_decode in zip(self.linear_conv_decoder, self.nonlinear_conv_decoder):
+            if start:
+                embed = linear_conv_decode(embed)
+                embed = nonlinear_conv_decode(embed) + embed
+                start = False
             else:
-                lembed = lconvtwo(embed)
+                lembed = linear_conv_decode(embed)
                 if lembed.size() == embed.size():
                     embed = lembed + embed
                 else:
                     embed = lembed
-                embed = convtwo(embed) + embed
+                embed = nonlinear_conv_decode(embed) + embed
         embed = self.final(embed)
         embed = torch.squeeze(embed)
         embed = self.flatten(embed)
