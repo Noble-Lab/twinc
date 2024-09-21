@@ -190,10 +190,10 @@ def twinc_train(config_file):
     if not os.path.exists(best_save_model):
         print(f"No prior model, random initialization", flush=True)
         # Move the model to the appropriate device
-        model = TransHiCNetClassify().to(device)
+        model = TwinCNet().to(device)
     else:
         print(f"Loading prior model {best_save_model}", flush=True)
-        model = TransHiCNetClassify()
+        model = TwinCNet()
         model.load_state_dict(torch.load(best_save_model))
         model = model.to(device)
 
