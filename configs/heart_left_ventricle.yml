@@ -1,7 +1,7 @@
 [input_files]
 seq_file=data/hg38.no_Y_MT.fa
 seq_memmap=data/hg38.no_Y_MT.memmap
-labels_file_wtissue=data/trans_contacts_all_heart_left_ventricle_100000_5_v_5_sup.txt
+labels_file_train=data/trans_contacts_all_heart_left_ventricle_100000_5_v_5_sup.txt
 labels_file_val=data/trans_contacts_chr1_chr3_heart_left_ventricle_100000_5_v_5_sup.txt
 labels_file_test=data/trans_contacts_chr9_chr10_heart_left_ventricle_100000_5_v_5_sup.txt
 

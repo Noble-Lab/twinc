@@ -118,24 +118,28 @@ def twinc_train(config_file):
                                shape=memmap_shape)
 
     # labels file
-    labels_file = np.loadtxt(config['input_files']['labels_file_wtissue'], delimiter="\t", dtype=str)
+    labels_file_train = np.loadtxt(config['input_files']['labels_file_train'], delimiter="\t", dtype=str)
 
     # get the list of chromosomes for training
     train_chroms = decode_list(config['data_parameters']['train_chroms'])
-    train_loci = extract_set_data(labels_file, train_chroms, seq_chrom_start)
+    train_loci = extract_set_data(labels_file_train, train_chroms, seq_chrom_start)
     print("train_chroms: ", train_chroms)
     print(f"train_loci: {train_loci[0]}, {len(train_loci)}")
     count_pos_neg(labels=np.array(train_loci[:, 6], dtype=int), set_name="Train set")
 
+    labels_file_val = np.loadtxt(config['input_files']['labels_file_val'], delimiter="\t", dtype=str)
+    
     # Get the list of chromosomes for validation
     val_chroms = decode_list(config['data_parameters']['val_chroms'])
-    val_loci = extract_set_data(labels_file, val_chroms, seq_chrom_start)
+    val_loci = extract_set_data(labels_file_val, val_chroms, seq_chrom_start)
     print("val_chroms: ", val_chroms)
     count_pos_neg(labels=np.array(val_loci[:, 6], dtype=int), set_name="Val set")
 
+    labels_file_test = np.loadtxt(config['input_files']['labels_file_test'], delimiter="\t", dtype=str)
+    
     # Get the list of chromosomes for the test
     test_chroms = decode_list(config['data_parameters']['test_chroms'])
-    test_loci = extract_set_data(labels_file, test_chroms, seq_chrom_start)
+    test_loci = extract_set_data(labels_file_test, test_chroms, seq_chrom_start)
     print("test_chroms: ", test_chroms)
     count_pos_neg(labels=np.array(test_loci[:, 6], dtype=int), set_name="Test set")
 
