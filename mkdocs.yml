@@ -2,7 +2,7 @@ site_name: TwinC
 nav:
   - TwinC: index.md
   - Getting Started: about.md
-  - Download: formats.md
+  - Downloads: downloads.md
   - Training: training.md
   - Inference: inference.md
   - FAQs: faq.md
