@@ -1,1 +1,1 @@
-include configs/heart_left_ventricle.yml
+include configs/example_config.yml
