@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Downstream Tools - TwinC</title>
+    <title>Training - TwinC</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Downstream Tools";
+        var mkdocs_page_name = "Training";
         var mkdocs_page_input_path = "training.md";
         var mkdocs_page_url = null;
       </script>
@@ -40,39 +40,49 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Getting Started</a>
+                <li class="toctree-l1"><a class="reference internal" href="..">TwinC</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../about/">File Formats</a>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../formats/">Download</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Downstream Tools</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Training</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../inference/">Inference</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQs</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../applications/">Applications</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../citing/">Citing</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../contributions/">Contributions</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="../conduct/">Code of Conduct</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
                 </li>
               </ul>
       </div>
@@ -89,7 +99,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Downstream Tools</li>
+      <li class="breadcrumb-item active">Training</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -98,13 +108,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="training-a-new-twinc-model">Training a new TwinC model</h1>
+<pre><code>twinc_train --config_file configs/heart_left_ventricle.yml
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../about/" class="btn btn-neutral float-left" title="File Formats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../inference/" class="btn btn-neutral float-right" title="FAQs">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../formats/" class="btn btn-neutral float-left" title="Download"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../inference/" class="btn btn-neutral float-right" title="Inference">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -127,7 +139,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../formats/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../inference/" style="color: #fcfcfc">Next &raquo;</a></span>

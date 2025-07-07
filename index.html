@@ -12,7 +12,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_name = "TwinC";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -40,45 +40,49 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Getting Started</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">TwinC</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
-    </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="about/">File Formats</a>
+                <li class="toctree-l1"><a class="reference internal" href="about/">Getting Started</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="training/">Downstream Tools</a>
+                <li class="toctree-l1"><a class="reference internal" href="formats/">Download</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="training/">Training</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="inference/">Inference</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="faq/">FAQs</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="applications/">Applications</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="citing/">Citing</a>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="inference/">FAQs</a>
+                <li class="toctree-l1"><a class="reference internal" href="contributions/">Contributions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="conduct/">Code of Conduct</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="changelog/">Changelog</a>
                 </li>
               </ul>
       </div>
@@ -95,7 +99,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="breadcrumb-item active">TwinC</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -104,26 +108,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+                <h1 id="twinc">TwinC</h1>
+<h1 id="what-is-twinc">What is TwinC?</h1>
+<p>TwinC is a Python package for training, inference, and interpretation of trans-3D genome folding in humans. TwinC uses a Convolutional Neural Network model that predicts contact between two <em>trans</em> genomic loci from nucleotide sequences. The model takes two 100 kbp nucleotide sequences as input and treats the task of predicting <em>trans</em> contacts as a classification task. To reproduce analyses performed in the <strong>Jha et al., 2024</strong>, please check out <a href="https://github.com/Noble-Lab/twinc_paper">TwinC 2024 manuscript repository</a>.</p>
+<h1 id="installation">Installation</h1>
+<pre><code>python -m pip install git+https://github.com/Noble-Lab/twinc
 </code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="about/" class="btn btn-neutral float-right" title="File Formats">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="about/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -167,5 +162,5 @@ docs/
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-07-07 18:06:31.512779+00:00
+Build Date UTC : 2025-07-07 18:25:15.958179+00:00
 -->
