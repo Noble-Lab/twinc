@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Download - TwinC</title>
+    <title>Downloads - TwinC</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Download";
-        var mkdocs_page_input_path = "formats.md";
+        var mkdocs_page_name = "Downloads";
+        var mkdocs_page_input_path = "downloads.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -48,7 +48,21 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Download</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Downloads</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#example-datasets-to-explore-the-package">Example datasets (to explore the package)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#full-datasets-to-reproduce-manuscript-results">Full datasets (to reproduce manuscript results)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-folder">Data folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#results-folder">Results folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#models-folder">Models folder</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -97,7 +111,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Download</li>
+      <li class="breadcrumb-item active">Downloads</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -106,7 +120,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="data-downloads">Data Downloads</h1>
+<h2 id="example-datasets-to-explore-the-package">Example datasets (to explore the package)</h2>
+<h2 id="full-datasets-to-reproduce-manuscript-results">Full datasets (to reproduce manuscript results)</h2>
+<p>We have submitted our training datasets to <a href="https://zenodo.org/records/15802811">zenodo.org/records/15802811</a>. The datasets are divided into three parts:</p>
+<h3 id="data-folder">Data folder</h3>
+<p>The sequence memory map, along with RNA-seq data corresponding to the heart left ventricle, can be downloaded using:</p>
+<pre><code>cd twinc-paper/
+wget https://zenodo.org/records/15802811/files/TwinC_data_resources_V1.tar.gz?download=1
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the data folder. </p>
+<pre><code>tar -xvzf TwinC_data_resources_V1.tar.gz 
+</code></pre>
+<h3 id="results-folder">Results folder</h3>
+<p>Labels for training, as well as intermediate results for reproducing the figures, can be downloaded using:</p>
+<pre><code>cd twinc-paper/
+https://zenodo.org/records/15802811/files/TwinC_label_resources_V1.tar.gz?download=1
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the results folder. </p>
+<pre><code>tar -xvzf TwinC_label_resources_V1.tar.gz 
+</code></pre>
+<h3 id="models-folder">Models folder</h3>
+<p>You can download the pretrained models using:</p>
+<pre><code>cd twinc-paper/
+https://zenodo.org/records/15802811/files/TwinC_models_V1.tar.gz?download=1
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the models folder. </p>
+<pre><code>tar -xvzf TwinC_models_V1.tar.gz 
+</code></pre>
               
             </div>
           </div><footer>
