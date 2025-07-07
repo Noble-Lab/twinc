@@ -1,0 +1,15 @@
+site_name: TwinC
+nav:
+  - TwinC: index.md
+  - Getting Started: about.md
+  - Download: formats.md
+  - Training: training.md
+  - Inference: inference.md
+  - FAQs: faq.md
+  - Applications: applications.md
+  - Citing: citing.md 
+  - Contributions: contributions.md
+  - Code of Conduct: conduct.md
+  - Changelog: changelog.md 
+theme: readthedocs
+
