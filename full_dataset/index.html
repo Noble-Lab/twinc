@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Citing - TwinC</title>
+    <title>Full Dataset - TwinC</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Citing";
-        var mkdocs_page_input_path = "citing.md";
+        var mkdocs_page_name = "Full Dataset";
+        var mkdocs_page_input_path = "full_dataset.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -51,8 +51,16 @@
                 <li class="toctree-l1"><a class="reference internal" href="../example_dataset/">Example Dataset</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../full_dataset/">Full Dataset</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Full Dataset</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data">Data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#labels">Labels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#models">Models</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -75,10 +83,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../applications/">Applications</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Citing</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../citing/">Citing</a>
                 </li>
               </ul>
               <ul>
@@ -107,7 +113,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Citing</li>
+      <li class="breadcrumb-item active">Full Dataset</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -116,14 +122,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="citation">Citation</h1>
-<p><strong>Jha A, Hristov BH, Wang X, Wang S, Greenleaf WJ, Kundaje A, Lieberman Aiden E, Bertero A, Noble WS.</strong>  Prediction and functional interpretation of inter-chromosomal genome architecture from DNA sequence with TwinC. <em>bioRxiv</em> (2024): 2024-09. doi: https://doi.org/10.1101/2024.09.16.613355</p>
+                <h1 id="full-dataset">Full dataset</h1>
+<p>This dataset can be used to reproduce results in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11429679/">TwinC manuscript</a>. Please download this data in the same folder as the <a href="https://github.com/Noble-Lab/twinc_paper">TwinC paper repository</a>. We have submitted our training datasets to <a href="https://zenodo.org/records/15802811">zenodo.org/records/15802811</a>. The datasets are divided into three parts:</p>
+<h3 id="data">Data</h3>
+<p>The sequence data can be downloaded using:</p>
+<pre><code>cd twinc-paper/
+wget https://zenodo.org/records/15802811/files/TwinC_data_resources_V1.tar.gz
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the data folder. </p>
+<pre><code>tar -xvzf TwinC_data_resources_V1.tar.gz 
+</code></pre>
+<p>This dataset contains: </p>
+<ol>
+<li>
+<p><strong>hg38.no_Y_MT.fa</strong>: Fasta file for the human genome containing chromosomes 1-22 and X.</p>
+</li>
+<li>
+<p><strong>hg38.no_Y_MT.fa.fai</strong>: Index for the fasta file.</p>
+</li>
+<li>
+<p><strong>hg38.no_Y_MT.memmap</strong>: One-hot-encoded memory map for the human genome.</p>
+</li>
+</ol>
+<pre><code>A -&gt; [1, 0, 0, 0]
+C -&gt; [0, 1, 0, 0]
+G -&gt; [0, 0, 1, 0]
+T -&gt; [0, 0, 0, 1]
+</code></pre>
+<ol>
+<li><strong>gene_tpm_2017-06-05_v8_heart_left_ventricle.gct</strong>: TPMs for genes in the heart's left ventricle from the GTEX. </li>
+</ol>
+<h3 id="labels">Labels</h3>
+<p>Labels for training, as well as intermediate results for reproducing the figures, can be downloaded using:</p>
+<pre><code>cd twinc-paper/
+wget https://zenodo.org/records/15802811/files/TwinC_label_resources_V1.tar.gz
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the results folder. </p>
+<pre><code>tar -xvzf TwinC_label_resources_V1.tar.gz 
+</code></pre>
+<h3 id="models">Models</h3>
+<p>You can download the pretrained models using:</p>
+<pre><code>cd twinc-paper/
+wget https://zenodo.org/records/15802811/files/TwinC_models_V1.tar.gz
+</code></pre>
+<p>After downloading, you can uncompress the file, and it will populate the models folder. </p>
+<pre><code>tar -xvzf TwinC_models_V1.tar.gz 
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../applications/" class="btn btn-neutral float-left" title="Applications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../contributions/" class="btn btn-neutral float-right" title="Contributions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../example_dataset/" class="btn btn-neutral float-left" title="Example Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../configuration/" class="btn btn-neutral float-right" title="Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -146,10 +196,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../applications/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../example_dataset/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../contributions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

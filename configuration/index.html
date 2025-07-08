@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Downloads - TwinC</title>
+    <title>Configuration - TwinC</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Downloads";
-        var mkdocs_page_input_path = "downloads.md";
+        var mkdocs_page_name = "Configuration";
+        var mkdocs_page_input_path = "configuration.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,15 +44,19 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../about/">Getting Started</a>
+                <li class="toctree-l1"><a class="reference internal" href="../start/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../example_dataset/">Example Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../full_dataset/">Full Dataset</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Downloads</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#example-dataset">Example dataset</a>
-    </li>
-    </ul>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Configuration</a>
                 </li>
               </ul>
               <ul>
@@ -101,7 +105,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Downloads</li>
+      <li class="breadcrumb-item active">Configuration</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -110,55 +114,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="downloads">Downloads</h1>
-<h2 id="example-dataset">Example dataset</h2>
-<p>We are providing an example dataset to test your TwinC installation and to prepare data, label and configuration files for training TwinC in a new tissue or cell line.  </p>
-<pre><code>cd twinc/
-wget https://zenodo.org/records/15839236/files/TwinC_example_V1.tar.gz
-</code></pre>
-<p>After downloading, you can uncompress the file, and it will populate the data folder. </p>
-<pre><code>tar -xvzf TwinC_example_V1.tar.gz 
-</code></pre>
-<p>This dataset contains: 
-1. <strong>hg38.no_Y_MT.fa</strong>: Fasta file for the human genome containing chromosomes 1-22 and X.</p>
-<ol>
-<li>
-<p><strong>hg38.no_Y_MT.fa.fai</strong>: Index for the fasta file.</p>
-</li>
-<li>
-<p><strong>hg38.no_Y_MT.memmap</strong>: One-hot-encoded memory map for the human genome.</p>
-</li>
-</ol>
-<pre><code>A -&gt; [1, 0, 0, 0]
-C -&gt; [0, 1, 0, 0]
-G -&gt; [0, 0, 1, 0]
-T -&gt; [0, 0, 0, 1]
-</code></pre>
-<ol>
-<li><strong>train_labels.txt</strong>: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -&gt; no contact, 1 -&gt; contact) and KR-normalized contact frequency. The columns in the files are as follows:</li>
-</ol>
-<pre><code>1. chrA_Name: Name of the first chromosome.
-2. chrA_Start: Start coordinate in chrA.
-3. chrA_End: End coordinate in chrA.
-4. chrB_Name: Name of the second chromosome.
-5. chrB_Start: Start coordinate in chrB.
-6. chrB_End: End coordinate in chrB.
-7. Contact_Label: Whether the two loci are in contact (0-&gt;No, 1-&gt;Yes).
-8. Contact_Frequency: KR-Normalized contact frequency.
-</code></pre>
-<ol>
-<li>
-<p><strong>val_labels.txt</strong>: Validation labels.</p>
-</li>
-<li>
-<p><strong>test_labels.txt</strong>: Test labels.  </p>
-</li>
-</ol>
+                
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../about/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../full_dataset/" class="btn btn-neutral float-left" title="Full Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../training/" class="btn btn-neutral float-right" title="Training">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -182,7 +143,7 @@ T -&gt; [0, 0, 0, 1]
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../full_dataset/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../training/" style="color: #fcfcfc">Next &raquo;</a></span>
