@@ -1,50 +1,38 @@
-# Data Downloads
+# Downloads
 
 ## Example dataset
-We are providing a lightweight dataset you can use to test your TwinC installation and to prepare data, label and configuration files for training a model for a new tissue or cell line.  
-
-
-
-## Full dataset
-
-This dataset can be used to reproduce results in the TwinC manuscript. Please download this data in the same folder as the [TwinC paper repository](https://github.com/Noble-Lab/twinc_paper). We have submitted our training datasets to [zenodo.org/records/15802811](https://zenodo.org/records/15802811). The datasets are divided into three parts:
-
-### Data
-The sequence data can be downloaded using:
+We are providing an example dataset to test your TwinC installation and to prepare data, label and configuration files for training TwinC in a new tissue or cell line.  
 
 ```
-cd twinc-paper/
-wget https://zenodo.org/records/15802811/files/TwinC_data_resources_V1.tar.gz
+cd twinc/
+wget https://zenodo.org/records/15802811/files/TwinC_example_V1.tar.gz
 ```
 
 After downloading, you can uncompress the file, and it will populate the data folder. 
 
 ```
-tar -xvzf TwinC_data_resources_V1.tar.gz 
+tar -xvzf TwinC_example_V1.tar.gz 
 ```
 
-### Labels
-Labels for training, as well as intermediate results for reproducing the figures, can be downloaded using:
-```
-cd twinc-paper/
-wget https://zenodo.org/records/15802811/files/TwinC_label_resources_V1.tar.gz
-```
-After downloading, you can uncompress the file, and it will populate the results folder. 
+This dataset contains: 
+1. hg38.no_Y_MT.fa: Fasta file for the human genome containing chromosomes 1-22 and X.
+2. hg38.no_Y_MT.fa.fai: Index for the fasta file.
+3. hg38.no_Y_MT.memmap: One-hot-encoded memory map for the human genome.
+   A -> [1, 0, 0, 0]
+   C -> [0, 1, 0, 0]
+   G -> [0, 0, 1, 0]
+   T -> [0, 0, 0, 1]
+4. train_labels.txt: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -> no contact, 1 -> contact) and KR-normalized contact frequency. The columns in the files are as follows:
+   1. chrA_Name: Name of the first chromosome.
+   2. chrA_Start: Start coordinate in chrA.
+   3. chrA_End: End coordinate in chrA.
+   4. chrB_Name: Name of the second chromosome.
+   5. chrB_Start: Start coordinate in chrB.
+   6. chrB_End: End coordinate in chrB.
+   7. Contact_Label: Whether the two loci are in contact (0->No, 1->Yes).
+   8. Contact_Frequency: KR-Normalized contact frequency.
+5. val_labels.txt: Validation labels.
+6. test_labels.txt: Test labels.  
 
-```
-tar -xvzf TwinC_label_resources_V1.tar.gz 
-```
-
-### Models
-You can download the pretrained models using:
-```
-cd twinc-paper/
-wget https://zenodo.org/records/15802811/files/TwinC_models_V1.tar.gz
-```
-After downloading, you can uncompress the file, and it will populate the models folder. 
-
-```
-tar -xvzf TwinC_models_V1.tar.gz 
-```
 
 
