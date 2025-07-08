@@ -114,19 +114,19 @@
 <h2 id="example-dataset">Example dataset</h2>
 <p>We are providing an example dataset to test your TwinC installation and to prepare data, label and configuration files for training TwinC in a new tissue or cell line.  </p>
 <pre><code>cd twinc/
-wget https://zenodo.org/records/15802811/files/TwinC_example_V1.tar.gz
+wget https://zenodo.org/records/15839236/files/TwinC_example_V1.tar.gz
 </code></pre>
 <p>After downloading, you can uncompress the file, and it will populate the data folder. </p>
 <pre><code>tar -xvzf TwinC_example_V1.tar.gz 
 </code></pre>
 <p>This dataset contains: 
-1. hg38.no_Y_MT.fa: Fasta file for the human genome containing chromosomes 1-22 and X.</p>
+1. <strong>hg38.no_Y_MT.fa</strong>: Fasta file for the human genome containing chromosomes 1-22 and X.</p>
 <ol>
 <li>
-<p>hg38.no_Y_MT.fa.fai: Index for the fasta file.</p>
+<p><strong>hg38.no_Y_MT.fa.fai</strong>: Index for the fasta file.</p>
 </li>
 <li>
-<p>hg38.no_Y_MT.memmap: One-hot-encoded memory map for the human genome.</p>
+<p><strong>hg38.no_Y_MT.memmap</strong>: One-hot-encoded memory map for the human genome.</p>
 </li>
 </ol>
 <pre><code>A -&gt; [1, 0, 0, 0]
@@ -135,7 +135,7 @@ G -&gt; [0, 0, 1, 0]
 T -&gt; [0, 0, 0, 1]
 </code></pre>
 <ol>
-<li>train_labels.txt: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -&gt; no contact, 1 -&gt; contact) and KR-normalized contact frequency. The columns in the files are as follows:</li>
+<li><strong>train_labels.txt</strong>: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -&gt; no contact, 1 -&gt; contact) and KR-normalized contact frequency. The columns in the files are as follows:</li>
 </ol>
 <pre><code>1. chrA_Name: Name of the first chromosome.
 2. chrA_Start: Start coordinate in chrA.
@@ -148,10 +148,10 @@ T -&gt; [0, 0, 0, 1]
 </code></pre>
 <ol>
 <li>
-<p>val_labels.txt: Validation labels.</p>
+<p><strong>val_labels.txt</strong>: Validation labels.</p>
 </li>
 <li>
-<p>test_labels.txt: Test labels.  </p>
+<p><strong>test_labels.txt</strong>: Test labels.  </p>
 </li>
 </ol>
               
