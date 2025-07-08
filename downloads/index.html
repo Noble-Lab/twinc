@@ -120,24 +120,40 @@ wget https://zenodo.org/records/15802811/files/TwinC_example_V1.tar.gz
 <pre><code>tar -xvzf TwinC_example_V1.tar.gz 
 </code></pre>
 <p>This dataset contains: 
-1. hg38.no_Y_MT.fa: Fasta file for the human genome containing chromosomes 1-22 and X.
-2. hg38.no_Y_MT.fa.fai: Index for the fasta file.
-3. hg38.no_Y_MT.memmap: One-hot-encoded memory map for the human genome.
-   A -&gt; [1, 0, 0, 0]
+1. hg38.no_Y_MT.fa: Fasta file for the human genome containing chromosomes 1-22 and X.</p>
+<ol>
+<li>
+<p>hg38.no_Y_MT.fa.fai: Index for the fasta file.</p>
+</li>
+<li>
+<p>hg38.no_Y_MT.memmap: One-hot-encoded memory map for the human genome.
+   <code>A -&gt; [1, 0, 0, 0]
    C -&gt; [0, 1, 0, 0]
    G -&gt; [0, 0, 1, 0]
-   T -&gt; [0, 0, 0, 1]
-4. train_labels.txt: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -&gt; no contact, 1 -&gt; contact) and KR-normalized contact frequency. The columns in the files are as follows:
-   1. chrA_Name: Name of the first chromosome.
-   2. chrA_Start: Start coordinate in chrA.
-   3. chrA_End: End coordinate in chrA.
-   4. chrB_Name: Name of the second chromosome.
-   5. chrB_Start: Start coordinate in chrB.
-   6. chrB_End: End coordinate in chrB.
-   7. Contact_Label: Whether the two loci are in contact (0-&gt;No, 1-&gt;Yes).
-   8. Contact_Frequency: KR-Normalized contact frequency.
-5. val_labels.txt: Validation labels.
-6. test_labels.txt: Test labels.  </p>
+   T -&gt; [0, 0, 0, 1]</code></p>
+</li>
+<li>
+<p>train_labels.txt: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -&gt; no contact, 1 -&gt; contact) and KR-normalized contact frequency. The columns in the files are as follows:
+   ```</p>
+</li>
+<li>chrA_Name: Name of the first chromosome.</li>
+<li>chrA_Start: Start coordinate in chrA.</li>
+<li>chrA_End: End coordinate in chrA.</li>
+<li>chrB_Name: Name of the second chromosome.</li>
+<li>chrB_Start: Start coordinate in chrB.</li>
+<li>chrB_End: End coordinate in chrB.</li>
+<li>Contact_Label: Whether the two loci are in contact (0-&gt;No, 1-&gt;Yes).</li>
+<li>
+<p>Contact_Frequency: KR-Normalized contact frequency.
+   ```</p>
+</li>
+<li>
+<p>val_labels.txt: Validation labels.</p>
+</li>
+<li>
+<p>test_labels.txt: Test labels.  </p>
+</li>
+</ol>
               
             </div>
           </div><footer>
