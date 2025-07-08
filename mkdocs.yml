@@ -1,8 +1,10 @@
 site_name: TwinC
 nav:
   - TwinC: index.md
-  - Getting Started: about.md
-  - Downloads: downloads.md
+  - Getting Started: start.md
+  - Example Dataset: example_dataset.md
+  - Full Dataset: full_dataset.md
+  - Configuration: configuration.md
   - Training: training.md
   - Inference: inference.md
   - FAQs: faq.md

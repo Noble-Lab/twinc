@@ -1,7 +1,6 @@
-# Downloads
+# Example dataset
 
-## Example dataset
-We are providing an example dataset to test your TwinC installation and to prepare data, label and configuration files for training TwinC in a new tissue or cell line.  
+We have provided an example dataset to test your TwinC installation. You can follow this dataset's format to prepare your data and label files for training TwinC in a new tissue or cell line.  
 
 ```
 cd twinc/
@@ -15,6 +14,7 @@ tar -xvzf TwinC_example_V1.tar.gz
 ```
 
 This dataset contains: 
+
 1. **hg38.no_Y_MT.fa**: Fasta file for the human genome containing chromosomes 1-22 and X.
    
 2. **hg38.no_Y_MT.fa.fai**: Index for the fasta file.
@@ -43,7 +43,5 @@ T -> [0, 0, 0, 1]
    
 7. **val_labels.txt**: Validation labels.
 
-8. **test_labels.txt**: Test labels.  
-
-
+8. **test_labels.txt**: Test labels.
 
