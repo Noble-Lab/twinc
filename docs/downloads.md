@@ -5,7 +5,7 @@ We are providing an example dataset to test your TwinC installation and to prepa
 
 ```
 cd twinc/
-wget https://zenodo.org/records/15802811/files/TwinC_example_V1.tar.gz
+wget https://zenodo.org/records/15839236/files/TwinC_example_V1.tar.gz
 ```
 
 After downloading, you can uncompress the file, and it will populate the data folder. 
@@ -15,11 +15,11 @@ tar -xvzf TwinC_example_V1.tar.gz
 ```
 
 This dataset contains: 
-1. hg38.no_Y_MT.fa: Fasta file for the human genome containing chromosomes 1-22 and X.
+1. **hg38.no_Y_MT.fa**: Fasta file for the human genome containing chromosomes 1-22 and X.
    
-2. hg38.no_Y_MT.fa.fai: Index for the fasta file.
+2. **hg38.no_Y_MT.fa.fai**: Index for the fasta file.
    
-3. hg38.no_Y_MT.memmap: One-hot-encoded memory map for the human genome.
+3. **hg38.no_Y_MT.memmap**: One-hot-encoded memory map for the human genome.
    
 ```
 A -> [1, 0, 0, 0]
@@ -28,7 +28,7 @@ G -> [0, 0, 1, 0]
 T -> [0, 0, 0, 1]
 ```
    
-5. train_labels.txt: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -> no contact, 1 -> contact) and KR-normalized contact frequency. The columns in the files are as follows:
+5. **train_labels.txt**: Training labels. A text file containing genomic coordinates from chromosomes A and B, a contact label (0 -> no contact, 1 -> contact) and KR-normalized contact frequency. The columns in the files are as follows:
 
 ```
 1. chrA_Name: Name of the first chromosome.
@@ -41,9 +41,9 @@ T -> [0, 0, 0, 1]
 8. Contact_Frequency: KR-Normalized contact frequency.
 ```
    
-7. val_labels.txt: Validation labels.
+7. **val_labels.txt**: Validation labels.
 
-8. test_labels.txt: Test labels.  
+8. **test_labels.txt**: Test labels.  
 
 
 
